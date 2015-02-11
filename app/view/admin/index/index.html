@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/public/admin/logo.png">
+
+    <title>Bootstrap 云新闻界面</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/public/admin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<link href="/public/admin/css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="/public/admin/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/public/admin/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/public/admin/js/html5shiv.min.js"></script>
+      <script src="/public/admin/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <?php include(APP_PATH."view/admin/include/header.html"); ?>
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+  
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+  
+          <div class="jumbotron">
+            <h1>移动互联网</h1>
+            <p>移动互联网，就是将移动通信和互联网二者结合起来，成为一体。是指互联网的技术、平台、商业模式和应用与移动通信技术结合并实践的活动的总称。4G时代的开启以及移动终端设备的凸显必将为移动互联网的发展注入巨大的能量，2014年移动互联网产业必将带来前所未有的飞跃。</p>
+          </div>
+  
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <?php include(APP_PATH."view/admin/include/sidebar.html"); ?><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/public/admin/js/jquery.min.js"></script>
+    <script src="/public/admin/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/public/admin/js/ie10-viewport-bug-workaround.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  $('[data-toggle="offcanvas"]').click(function () {
+			$('.row-offcanvas').toggleClass('active')
+		  });
+		});
+	</script>
+  </body>
+</html>

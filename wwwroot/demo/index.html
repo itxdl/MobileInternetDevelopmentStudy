@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>兄弟连云新闻APP测试端</title>
+		<script src="./jquery-1.7.2.min.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<h3>兄弟连云新闻APP测试端</h3>
+		<a href="login.html">登录</a>
+	    <button>查看资源</button>
+	    <button>合法请求</button>
+		<script type="text/javascript">
+			$("button").click(function(){
+				switch($(this).html()){
+					case "查看资源":
+						$.ajax({
+							url:"http://cloudnews.com/api/query",
+							type:"post",
+							//data:{},
+							dataType:"json",
+							success:function(data){
+								alert(data);
+							},
+							error:function(){
+								alert("请求地址错误！");
+							}	
+						});
+						break;
+					case "合法请求":
+						$.ajax({
+							url:"http://cloudnews.com/api/query",
+							type:"post",
+							data:{time:12345673,uid:0,sign:'ip001',parameters:""},
+							dataType:"json",
+							success:function(data){
+								alert(data);
+							},
+							error:function(){
+								alert("请求地址错误！");
+							}	
+						});
+						break;
+					
+				}
+				
+			});
+			//alert($.md5("Hello,Liehuo.Net"));
+		</script>
+	</body>
+</html>

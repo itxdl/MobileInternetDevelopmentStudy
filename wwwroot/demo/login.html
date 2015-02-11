@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>兄弟连云新闻APP测试端</title>
+		<script src="./jquery-1.7.2.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h3>兄弟连云新闻APP测试端: APP登录</h3>
+		<form action="＃" method="post" onsubmit="return doSend(this)">
+	    		账号：<input type="text" name="username"/><br/><br/>
+	    		密码：<input type="password" name="userpass"/><br/><br/>
+	    		<input type="submit" value="发送"/>
+	    		<input type="reset" value="重置"/>
+	    </form>
+	    <br/><br/>
+		<ul id="uid"></ul>
+		
+		<script type="text/javascript">
+			//执行发送：
+			function doSend(form){
+				var userinfo = {username:$("input[name='username']").val(),userpass:$("input[name='userpass']").val()};
+				$.ajax({
+					url:"http://cloudnews.com/api/login",
+					type:"POST",
+					data:{time:'1234567890',uid:0,sign:'d04aef5de11968412f5aab7bdefb520c',devicesn:"ip001",parameters:userinfo},
+					dataType:"json",
+					success:function(data){
+						if(!data.resultDate){
+							alert(data.error.errMsg);
+						}else{
+							alert(data.resultDate);
+						}
+					},
+					error:function(){
+						alert("请求地址错误！");
+					}	
+				});
+				return false;
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="/admin.php/userList" class="list-group-item <?php echo ($_GET['do']=='userList')?'active':''; ?>">会员管理</a>
+            <!--<a href="#" class="list-group-item">添加会员</a>-->
+            <a href="/admin.php/categoryList" class="list-group-item <?php echo ($_GET['do']=='categoryList')?'active':''; ?>">新闻分类</a>
+            <!--<a href="#" class="list-group-item">添加分类</a>-->
+            <a href="/admin.php/newsList" class="list-group-item <?php echo ($_GET['do']=='newsList')?'active':''; ?>">新闻管理</a>
+            <a href="/admin.php/newsAdd" class="list-group-item  <?php echo ($_GET['do']=='newsAdd')?'active':''; ?>">新闻添加</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
